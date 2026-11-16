@@ -16,6 +16,7 @@ check:
 test:
 	@swift run --package-path app -c debug DASTests
 	@bash scripts/tests/metadata.sh
+	@bash scripts/tests/install.sh
 
 lint:
 	@for script in scripts/*.sh scripts/tests/*.sh; do bash -n "$$script" || exit 1; done
