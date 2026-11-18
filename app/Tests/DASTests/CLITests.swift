@@ -183,6 +183,10 @@ func runCLITests(_ t: TestRunner) {
             t.expect(false, "a bare helper must not be packaged at runtime")
         } catch DASError.helperMissing(let searched) {
             t.equal(searched, [adjacent.path], "missing helpers report the searched locations")
+            let message = DASError.helperMissing(searched: searched).description
+            t.expect(
+                message.contains("Reinstall das") && message.contains("run `make build`"),
+                "missing helpers explain the fix for both installation methods")
         }
         t.expect(!fm.fileExists(atPath: adjacent.path), "lookup does not create a helper bundle")
 

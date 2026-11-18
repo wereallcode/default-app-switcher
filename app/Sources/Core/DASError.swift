@@ -21,7 +21,7 @@ package enum DASError: Error, CustomStringConvertible {
                 The helper application was not found.
                 Searched:
                 \(searched.map { "  " + $0 }.joined(separator: "\n"))
-                Rebuild with `make build` or set `DAS_HELPER_PATH`.
+                Reinstall das, or run `make build` in a manual installation.
                 """
         case .helperFailed(let message):
             return "Helper failed: \(message)"
