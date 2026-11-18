@@ -1,6 +1,6 @@
 CONFIGURATION ?= release
 
-.PHONY: all build check test lint format format-check clean run
+.PHONY: all build check test lint format format-check clean run hooks
 
 all: build
 
@@ -19,7 +19,7 @@ test:
 	@bash scripts/tests/install.sh
 
 lint:
-	@for script in scripts/*.sh scripts/tests/*.sh; do bash -n "$$script" || exit 1; done
+	@for script in scripts/*.sh scripts/tests/*.sh .githooks/*; do bash -n "$$script" || exit 1; done
 	@bash scripts/check.sh
 
 format:
@@ -34,3 +34,7 @@ run: build
 clean:
 	@swift package --package-path app clean && rm -rf dist
 	@printf 'Build files removed.\n'
+
+hooks:
+	@git config core.hooksPath .githooks
+	@printf 'Git hooks enabled from .githooks.\n'
