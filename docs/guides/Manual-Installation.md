@@ -2,7 +2,7 @@
 
 This guide covers manual installation, updates and removal.
 
-## Requirements
+## 1. Requirements
 
 - A macOS version supported by your installed `Swift 6` toolchain to build from source.
 - `Xcode Command Line Tools` with `Swift 6` or later.
@@ -10,12 +10,12 @@ This guide covers manual installation, updates and removal.
 
 Install missing command line tools with `xcode-select --install`.
 
-### Compatibility
+### 1.1. Compatibility
 
 - The build targets `macOS 12` without automated compatibility testing for that version.
 - The build and automated checks passed with `Swift 6.3.3` on `macOS 26.6.2` (`Apple Silicon`).
 
-## Install
+## 2. Install
 
 Open a new terminal and follow these steps.
 
@@ -33,7 +33,7 @@ Run `das` with this command.
 ./dist/das
 ```
 
-## Add to `PATH`
+### 2.1. Add to `PATH`
 
 Follow these steps to add `das` to your `PATH` and run it from any directory.
 
@@ -59,7 +59,7 @@ Run `das`. 🥳
 das
 ```
 
-## Update
+## 3. Update
 
 Follow these steps to update your local copy and rebuild.
 
@@ -71,7 +71,7 @@ cd "$HOME/.default-app-switcher" && git pull --ff-only
 make build
 ```
 
-## Uninstall
+## 4. Uninstall
 
 1. Remove the `PATH` line from your shell startup file.
 2. Open a new terminal.
