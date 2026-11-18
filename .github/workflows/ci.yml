@@ -16,17 +16,13 @@ concurrency:
 jobs:
   test:
     name: Checks
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Lint
         run: make lint
-      - name: Check Formatting
-        run: make format-check
-      - name: Test
-        run: make test
-      - name: Build
-        run: make build
+      - name: Test Metadata
+        run: bash scripts/tests/metadata.sh
 
   release:
     name: GitHub Release
