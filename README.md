@@ -28,6 +28,8 @@ Open a new terminal and run `das`; use `das --help` or `das --version` for detai
 
 _If `das` is not found, follow the installer's instructions to add `$HOME/.local/bin` to your shell's `PATH`._
 
+_If `das` reports a missing helper application, uninstall and run the installation command again._
+
 #### Update
 
 Run the installation command again to update to the latest release.
@@ -45,4 +47,3 @@ This removes Default App Switcher's installed files and command link; your defau
 ## Guides
 
 - [Manual Installation](docs/guides/Manual-Installation.md)
-- [Troubleshooting](docs/guides/Troubleshooting.md)

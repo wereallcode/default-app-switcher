@@ -33,6 +33,8 @@ Run `das` with this command.
 ./dist/das
 ```
 
+`das` needs `das-helper.app` in the same directory; run `make build` again if it is missing.
+
 ### 2.1. Add to `PATH`
 
 Follow these steps to add `das` to your `PATH` and run it from any directory.
@@ -58,6 +60,8 @@ Run `das`. 🥳
 ```zsh
 das
 ```
+
+If the shell still cannot find `das`, check that the line is saved and open a new terminal.
 
 ## 3. Update
 
